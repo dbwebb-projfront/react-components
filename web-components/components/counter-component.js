@@ -3,6 +3,7 @@ export default class CounterComponent extends HTMLElement {
     super()
 
     this.count = 0
+    this.celebration = ""
   }
   
   connectedCallback() {
@@ -11,6 +12,11 @@ export default class CounterComponent extends HTMLElement {
 
   increase() {
     this.count += 1
+
+    if (this.count >= 10) {
+      this.celebration = "celebration"
+    }
+
     this.render()
   }
 
@@ -20,7 +26,10 @@ export default class CounterComponent extends HTMLElement {
     }
 
     let countContainer = document.createElement("div")
-    countContainer.className = "count-container"
+    countContainer.classList.add("count-container")
+    if (this.celebration) {
+      countContainer.classList.add(this.celebration)
+    }
 
     let counterTitle = document.createElement("h2")
     counterTitle.textContent = this.count

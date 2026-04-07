@@ -36,10 +36,17 @@ h2 {
   display: flex;
   gap: 1.68rem;
   align-items: flex-start;
+  padding: 1.68rem;
 }
 
 .button {
   font-size: 1.2em;
   padding: 0.84rem 1.68rem;
 }
+
+.celebration {
+  background-color: #FF4136;
+  color: #fff;
+}
+
 
