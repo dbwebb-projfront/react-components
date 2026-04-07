@@ -32,3 +32,16 @@ h2 {
   margin-bottom: 1.68rem;
 }
 
+.count-container {
+  display: flex;
+  gap: 1.68rem;
+  align-items: flex-start;
+}
+
+.button {
+  font-size: 1.2em;
+  padding: 0.84rem 1.68rem;
+}
+
+
+
